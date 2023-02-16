@@ -133,3 +133,10 @@ body {
     height: 48px;
   }
 }
+
+@media screen and (max-width: 650px) {
+  .quotes__copy-btn {
+    top: 1px;
+    right: 1px;
+  }
+}
