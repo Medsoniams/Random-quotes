@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Comfortaa', cursive;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5CDB95;
+  padding: 0 20px;
+}
+
+.quote__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  text-align: center;
+  gap: 20px;
+  color: #EDF5E1;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.23);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.3px);
+  -webkit-backdrop-filter: blur(5.3px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+
+.quote__text {
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 16px;
+}
+
+.quote__author {
+  font-size: 14px;
+}
+
+.quotes__buttons {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.reload-btn {
+  width: 200px;
+  height: 48px;
+  background-color: #05386B;
+  color: #EDF5E1;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+
+.reload-btn:active {
+  border: 1px solid #ffffff;
+}
+
+.copy-btn {
+  margin-right: auto;
+}
+
+.copy-btn img {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 425px) {
+  .quote__text {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  .quote__author {
+    font-size: 14px;
+  }
+
+  .reload-btn {
+    width: 125px;
+    height: 48px
+  }
+}
