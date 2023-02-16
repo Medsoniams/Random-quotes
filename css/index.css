@@ -123,6 +123,11 @@ body {
     font-size: 14px;
   }
 
+  .quotes__copy-btn {
+    top: 1px;
+    right: 1px;
+  }
+
   .reload-btn {
     width: 125px;
     height: 48px;
