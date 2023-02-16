@@ -12,16 +12,15 @@
 </head>
 <body>
 <section class="quote__wrapper">
-  <div id="quote">
+  <div class="quotes__copy-btn">
+    <img class="quotes__copy-btn_clipboard" src="icons/clipboard.png" alt="Copy icons" title="Скопіювати цитату">
+    <img class="quotes__copy-btn_done" src="icons/done.svg" alt="">
+  </div>
+  <div class="quote">
     <p class="quote__text copy__quotes"></p>
     <p class="quote__author"></p>
   </div>
-  <div class="quotes__buttons">
-    <div class="quotes__btn copy-btn">
-      <img src="icons/content-copy.svg" alt="Copy icons" title="Скопіювати цитату">
-    </div>
-    <button class="quotes__btn reload-btn">Нова цитата</button>
-  </div>
+  <button class="quotes__reload-btn">Нова цитата</button>
 </section>
 <script type="module" src="js/main.js"></script>
 </body>
