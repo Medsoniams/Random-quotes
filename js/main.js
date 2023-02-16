@@ -77,10 +77,11 @@ const quotes = [
 
 const quoteText = document.querySelector(".quote__text");
 const quoteAuthor = document.querySelector(".quote__author");
-const reload = document.querySelector(".reload-btn");
+const reload = document.querySelector(".quotes__reload-btn");
 
 const copyText = document.querySelector(".copy__quotes");
-const copyBtn = document.querySelector(".copy-btn");
+const copyBtn = document.querySelector(".quotes__copy-btn");
+const copyDone = document.querySelector(".quotes__copy-btn_done");
 let useQuotes = [];
 
 const quotesRender = () => {
@@ -97,7 +98,12 @@ const quotesRender = () => {
   }
 };
 
+const delClass = () => {
+  copyDone.classList.remove("active");
+}
+
 const copyQuotes = () => {
+  copyDone.classList.add("active");
   navigator.clipboard
     .writeText(copyText.innerHTML)
     .then(() => {
@@ -106,7 +112,10 @@ const copyQuotes = () => {
     .catch((err) => {
       console.error(err);
     });
+  setTimeout(delClass, 1000);
 };
+
+
 
 copyBtn.addEventListener("click", copyQuotes);
 reload.addEventListener("click", quotesRender);
