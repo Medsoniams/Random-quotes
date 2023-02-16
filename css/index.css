@@ -5,7 +5,7 @@
 }
 
 html {
-  font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
 }
 
 body {
@@ -14,20 +14,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #5CDB95;
+  background-color: #5cdb95;
   padding: 0 20px;
 }
 
 .quote__wrapper {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 600px;
+  max-width: 700px;
   text-align: center;
   gap: 20px;
-  color: #EDF5E1;
-  padding: 40px 20px;
+  color: #edf5e1;
+  padding: 35px 20px 20px;
   background: rgba(255, 255, 255, 0.23);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -36,6 +37,13 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
+.quote__wrapper:hover .quotes__copy-btn {
+  display: block;
+}
+
+.quote {
+  max-width: 600px;
+}
 
 .quote__text {
   font-size: 24px;
@@ -53,29 +61,55 @@ body {
   gap: 40px;
 }
 
-.reload-btn {
+.quotes__reload-btn {
   width: 200px;
   height: 48px;
-  background-color: #05386B;
-  color: #EDF5E1;
+  background-color: #05386b;
+  color: #edf5e1;
   text-align: center;
   border-radius: 8px;
   cursor: pointer;
   border: none;
 }
 
-.reload-btn:active {
+.quotes__reload-btn:active {
   border: 1px solid #ffffff;
 }
 
-.copy-btn {
-  margin-right: auto;
+.quotes__copy-btn {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  cursor: pointer;
+  padding: 5px;
 }
 
-.copy-btn img {
-  width: 30px;
-  height: 30px;
+.quotes__copy-btn:hover {
+  background-color: rgba(255, 255, 255, 0.23);
+  border-radius: 8px;
+}
+
+.quotes__copy-btn_clipboard {
+  width: 25px;
+  height: 25px;
   vertical-align: middle;
+}
+
+.quotes__copy-btn_done {
+  display: none;
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  width: 15px;
+  height: 15px;
+  background-image: url(icons/done.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.quotes__copy-btn_done.active {
+  display: block;
 }
 
 @media screen and (max-width: 425px) {
@@ -91,6 +125,6 @@ body {
 
   .reload-btn {
     width: 125px;
-    height: 48px
+    height: 48px;
   }
 }
