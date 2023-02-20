@@ -1,4 +1,5 @@
 # Project "Random Quotes"
+medsoniams.github.io/Random-quotes/
 ## Description
 The "Random Quotes" project is a web application that allows users to receive random quotes from a pre-defined list.
 ## Functionality
